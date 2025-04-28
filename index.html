@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>짱구는 못말려</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f5f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 650px;
+            margin: 30px auto;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 0;
+            background-color: white;
+            position: relative;
+        }
+
+        header h1 {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            right: 0;
+            margin: 0;
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            z-index: 10;
+        }
+
+        .main-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: brightness(0.9);
+        }
+
+        .content {
+            background-color: white;
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .section h2 {
+            color: #FF6B6B;
+            border-bottom: 2px solid #FF6B6B;
+            padding-bottom: 10px;
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .shin-chan-image {
+            text-align: center;
+            margin: 0 0 25px 0;
+        }
+
+        .shin-chan-image img {
+            max-width: 350px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .shin-chan-image img:hover {
+            transform: scale(1.02);
+        }
+
+        .family-photos,
+        .friends-photos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 0 25px 0;
+        }
+
+        .family-photo,
+        .friend-photo {
+            width: 350px;
+            height: auto;
+            margin: 10px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .family-photo:hover,
+        .friend-photo:hover {
+            transform: scale(1.02);
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        strong {
+            color: #FF6B6B;
+            font-weight: 700;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+            color: white;
+            text-align: center;
+            font-size: 14px;
+            padding: 15px 0;
+            border-radius: 0 0 15px 15px;
+            font-weight: 500;
+        }
+
+        /* 추가된 애니메이션 효과 */
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s forwards;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.3s; }
+        .section:nth-child(3) { animation-delay: 0.5s; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>짱구는 못말려</h1>
+        <!-- 메인 이미지 - 사진 전체를 큰 비율로 표시 -->
+        <img src="./public/main.png" alt="짱구 가족과 이웃들" class="main-image">
+    </header>
+
+    <div class="content">
+        <div class="section">
+            <h2>짱구 소개</h2>
+            <!-- 짱구 단독 이미지를 설명 위로 이동 -->
+            <div class="shin-chan-image">
+                <img src="./public/img1.png" alt="짱구 단독 이미지">
+            </div>
+            <!-- 짱구 소개 내용 -->
+            <p><strong>짱구는 못말려</strong> '짱구는 못말려'는 일본의 만화가 우스이 요시토가 만든 작품으로, 다섯 살 어린이인 신짱구(노하라 신노스케)를 중심으로 펼쳐지는 유쾌하고 엉뚱한 일상 이야기를 다룹니다. 짱구는 어른스러운 말투와 엉뚱한 행동으로 주변 사람들을 당황하게 만들지만, 그만의 순수함과 따뜻함으로 많은 사랑을 받고 있습니다. 애니메이션은 코믹하면서도 가족과 친구 간의 소중한 관계를 따뜻하게 그려내어 전 세계적으로 인기를 얻었습니다.</p>
+        </div>
+
+        <div class="section">
+            <h2>가족 소개</h2>
+            <!-- 가족 사진을 설명 위로 이동 -->
+            <div class="family-photos">
+                <img src="./public/img2.png" alt="가족 사진" class="family-photo">
+            </div>
+            <!-- 가족 소개 내용 -->
+            <p><strong>짱구 가족</strong> 짱구의 가족은 다섯 명으로 구성되어 있습니다.</p>
+            <ul>
+                <li><strong>신짱구</strong>는 장난꾸러기지만 가족을 누구보다 사랑하는 다섯 살 소년입니다.</li>
+                <li><strong>신형만</strong>은 짱구의 아버지로, 평범한 회사원이며 가족을 부양하기 위해 열심히 일하는 책임감 있는 인물입니다.</li>
+                <li><strong>봉미선</strong>은 짱구의 어머니로, 가정주부이며 엄격하면서도 따뜻하게 가족을 이끌어가는 중심 역할을 합니다.</li>
+                <li><strong>신짱아</strong>는 짱구의 여동생으로, 아직 아기지만 이미 짱구 못지않은 장난기를 보여줍니다.</li>
+                <li><strong>흰둥이</strong>는 가족과 함께 사는 반려견으로, 똑똑하고 짱구를 잘 돌보는 충직한 친구입니다.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>친구들 소개</h2>
+            <!-- 친구들 사진을 설명 위로 이동 -->
+            <div class="friends-photos">
+                <img src="./public/img3.png" alt="떡잎마을 방범대" class="friend-photo">
+            </div>
+            <!-- 친구들 소개 내용 -->
+            <p><strong>떡잎마을 방범대</strong> '떡잎마을 방범대'는 짱구와 그의 친구들이 만든 어린이 모임입니다. 마을의 평화를 지킨다는 목표를 가지고 있지만, 실제로는 친구들과 함께 놀고 모험을 떠나는 일이 대부분입니다. 멤버는 신짱구, 철수(논리적이고 진지한 성격), 맹구(순박하고 느릿한 친구), 유리(새침하고 여린 성격), 훈이(똑똑하고 리더십이 있는 친구) 이렇게 다섯 명입니다. 방범대는 서로 다른 성격을 가진 친구들이 모여 다양한 에피소드를 만들어가며, 우정과 협력의 소중함을 보여줍니다.</p>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 짱구는 못말려 팬 페이지
+    </footer>
+</div>
+</body>
+</html>
